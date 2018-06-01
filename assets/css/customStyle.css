@@ -1,0 +1,23 @@
+#imageDiv {
+    width:100%; 
+    height:80%;
+}
+
+#responseTextArea {
+    width:100%; 
+    height:400px;
+}
+
+#jsonOutput {
+    width: 100%;
+}
+
+#sourceImage {
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+}
+
+#wrapper {
+    width: 100%;
+}

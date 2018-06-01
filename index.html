@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Microsoft Azure Cognitive Services Face API Introduction</title>
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/customStyle.css" rel="stylesheet">
+  </head>
+  <body class="bg-light" >
+    <div class="container">
+
+      <div class="py-5 text-center">
+        <h2>Microsoft Azure Cognitive Services Face API Introduction</h2>
+      </div>
+
+      <div class="row">
+
+        <!-- Left columns -->
+        <div class="col-md-8">
+
+          <!-- Analyze Face  -->
+          <div class="col-12 order-md-1">
+            <h4 class="mb-3">Analyze Face</h4>
+            <p class="lead">Enter the URL to an image that includes a face or multiple faces </p>
+            <div class="row">
+              <div class="col-12 mb-3">
+                <label for="inputImage">Image URL</label>
+                <input type="text" class="form-control" id="inputImage" placeholder="" value="https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-3">
+                <button class="btn btn-primary" onclick="detectFaceFromUrl()">Analyze</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Face List operations  -->
+          <div class="col-12 order-md-3">
+            <h4 class="mb-3">Face List operations</h4>
+            <p class="lead">Enter a name of the Face List you would like to use </p>
+            <div class="row">
+              <div class="col-12 mb-3">
+                <label for="inputFaceListName">Face List Name (Id)</label>
+                <input type="text" class="form-control" id="inputFaceListName" placeholder="" value="list1">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-3">
+                <button class="btn btn-success" onclick="createFaceList()">Create</button>
+              </div>
+              <div class="col-6 mb-3">
+                <button class="btn btn-info" onclick="getFaceList()">Get</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Face operations  -->
+          <div class="col-12 order-md-4">
+            <h4 class="mb-3">Face operations</h4>
+            <p class="lead">Enter the Face Id of the Face you would like use</p>
+            <div class="row">
+              <div class="col-12 mb-3">
+                <label for="inputFaceId">Face Id</label>
+                <input type="text" class="form-control" id="inputFaceId" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-3">
+                <button class="btn btn-success" onclick="addFaceToFaceList()">Add</button>
+              </div>
+              <div class="col-6 mb-3">
+                <button class="btn btn-info" onclick="findSimilarFaces()">Find similar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Source Image / Right Column -->
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Source Image</span>
+          </h4>
+          <div id="imageDiv">
+            <img id="sourceImage"/>
+          </div>
+        </div>
+        
+        <!-- JSON output -->
+        <div class="col-12 order-md-5" id="wrapper">
+          <h4 class="mb-3">Response</h4>
+          <div id="jsonOutput">
+            <textarea id="responseTextArea" class="UIInput"></textarea>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="assets/scripts/keys.js"></script>
+    <script src="assets/scripts/faceApiRequestHandler.js"></script>
+
+  </body>
+</html>
