@@ -15,5 +15,4 @@ var subscriptionKey = "";
 //
 // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
 // a free trial subscription key, you should not need to change this region.
-var uriBase = "";
-
+var uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/";
